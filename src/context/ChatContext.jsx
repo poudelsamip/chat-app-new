@@ -21,6 +21,11 @@ const ChatContextProvider = ({ children }) => {
               ? currUser.uid + action.payload.uid
               : action.payload.uid + currUser.uid,
         };
+      case "REMOVE_USER":
+        return {
+          user: {},
+          chatId: "null",
+        };
       default: {
         return state;
       }

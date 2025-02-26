@@ -31,6 +31,7 @@ const Search = () => {
         allUsersFromSearch.push(doc.data());
       });
       setUser(allUsersFromSearch);
+      console.log(allUsersFromSearch);
     } catch (err) {
       alert(err);
     }
@@ -42,7 +43,7 @@ const Search = () => {
     }
   };
 
-  const handleSelect = async () => {
+  const handleSelect = async (user) => {
     const combinedID =
       currUser.uid > user.uid
         ? currUser.uid + user.uid
@@ -91,10 +92,11 @@ const Search = () => {
       </div>
       {user && (
         <>
-          {user.map((item) => (
+          {user.map((item, index) => (
             <div
               className="cursor-pointer p-2 flex items-center gap-2 text-white hover:bg-purple-400"
-              onClick={handleSelect}
+              onClick={() => handleSelect(item)}
+              key={index}
             >
               <img
                 // src={item.photoURL}

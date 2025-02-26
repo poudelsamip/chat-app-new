@@ -2,13 +2,16 @@ import { useNavigate } from "react-router-dom";
 import { AuthProvider } from "../context/MainProvider";
 import { useContext } from "react";
 import man from "../assets/man.jpeg";
+import { ChatContext } from "../context/ChatContext";
 
 const Profile = () => {
   const { currUser, logOut } = useContext(AuthProvider);
+  const { data, dispatch } = useContext(ChatContext);
   const navigate = useNavigate();
 
   const handleLogOut = async () => {
     await logOut();
+    dispatch({ type: "REMOVE_USER" });
     navigate("/login");
   };
 
