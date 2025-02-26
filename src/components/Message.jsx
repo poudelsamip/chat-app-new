@@ -21,6 +21,8 @@ const Message = ({ message }) => {
               // message.senderId == currUser.uid
               //   ? currUser.photoURL
               //   : data.user.photoURL
+
+              // Image hardcoded due to error
               message.senderId == currUser.uid ? man : man2
             }
             alt=""

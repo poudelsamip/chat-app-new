@@ -18,6 +18,8 @@ const Profile = () => {
         {currUser?.photoURL && (
           <img
             // src={currUser?.photoURL}
+
+            // Image hardcoded due to error
             src={man}
             alt="Profile Picture"
             className="h-[30px] w-[30px] rounded-full object-cover"

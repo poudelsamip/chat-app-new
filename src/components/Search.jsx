@@ -98,6 +98,8 @@ const Search = () => {
             >
               <img
                 // src={item.photoURL}
+
+                // Image hardcoded due to error
                 src={man2}
                 className="h-[50px] w-[50px] object-cover rounded-full"
               />

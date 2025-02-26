@@ -39,6 +39,7 @@ const Chats = () => {
         >
           <img
             // src={chat[1].userInfo?.photoURL}
+            // Image hardcoded due to error
             src={man2}
             alt="profile picture"
             className="h-[50px] w-[50px] object-cover rounded-full"
