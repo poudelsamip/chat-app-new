@@ -10,11 +10,15 @@ const Chat = () => {
   const { data } = useContext(ChatContext);
   return (
     <>
-      <div className="flex-4 flex flex-col justify-between">
+      <div className="flex-4 flex justify-between">
+        <div className="h-full flex flex-col w-full">
+          <Messages />
+          <Input />
+        </div>
         <div
-          className={`h-[50px] ${
+          className={`h-full ${
             data.chatId !== "null" ? "bg-purple-900" : "bg-blue-300"
-          }  flex items-center justify-between px-5 text-white`}
+          }   px-5 text-white`}
         >
           <span className="text-2xl font-semibold">
             {data.user?.displayName}
@@ -27,9 +31,6 @@ const Chat = () => {
             </div>
           )}
         </div>
-
-        <Messages />
-        <Input />
       </div>
     </>
   );
