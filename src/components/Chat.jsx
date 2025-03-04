@@ -18,13 +18,13 @@ const Chat = () => {
         <div
           className={`h-full ${
             data.chatId !== "null" ? "bg-purple-900" : "bg-blue-300"
-          }   px-5 text-white`}
+          }   px-5 text-white w-[250px]`}
         >
-          <span className="text-2xl font-semibold">
+          <p className="text-2xl font-semibold mt-2">
             {data.user?.displayName}
-          </span>
+          </p>
           {data.chatId !== "null" && (
-            <div className="flex gap-4 ">
+            <div className="flex justify-between mt-5">
               <IoIosCall size={25} className="cursor-pointer" />
               <FaVideo size={25} className="cursor-pointer" />
               <BsThreeDotsVertical size={25} className="cursor-pointer" />
